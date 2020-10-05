@@ -1,9 +1,12 @@
-all:
-	make pdf
-	make pdf
+.PHONY: clean view
+
+all: pdf
 
 pdf:
 	pdflatex presentation.tex
+
+view:
+	${READER} presentation.pdf
 
 clean:
 	rm -f *.aux
